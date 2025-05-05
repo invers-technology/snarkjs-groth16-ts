@@ -4,16 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "bench": "ts-node bench/groth16.ts",
     "setup": "sh script/setup.sh",
     "fmt": "prettier --write .",
+    "fmt:check": "prettier --check .",
+    "build": "tsc",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/benchmark": "^2.1.5",
     "@types/jest": "^29.5.14",
     "@types/snarkjs": "^0.7.9",
+    "benchmark": "^2.1.4",
     "circom_tester": "^0.0.21",
     "jest": "^29.7.0",
     "prettier": "^3.5.3",
