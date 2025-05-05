@@ -1,5 +1,6 @@
 *_js
 dist
-*.r1cs
 node_modules
 .env
+compiled_circuit
+setup_params
