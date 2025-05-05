@@ -2,7 +2,7 @@ import Benchmark from "benchmark";
 import { Prover, Verifier } from "../src";
 import { Groth16Proof, PublicSignals } from "snarkjs";
 
-const suite = new Benchmark.Suite;
+const suite = new Benchmark.Suite();
 const compiledCircuitPath = "tests/mul.wasm";
 const zkeyPath = "tests/mul_0001.zkey";
 const vKeyPath = "tests/verification_key.json";

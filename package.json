@@ -1,19 +1,40 @@
 {
-  "name": "snarkjs-groth16-ts",
-  "version": "1.0.0",
-  "description": "",
+  "name": "groth16-ts",
+  "version": "0.0.2",
+  "author": {
+    "name": "Ash Whitehat",
+    "url": "https://github.com/ashwhitehat"
+  },
+  "description": "Groth16 in Typescript",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ashwhitehat/snarkjs-groth16-ts.git"
+  },
+  "homepage": "https://github.com/ashwhitehat/snarkjs-groth16-ts",
+  "keywords": [
+    "groth16",
+    "typescript",
+    "circom"
+  ],
+  "license": "Apache-2.0",
   "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "*.map",
+    "circuit"
+  ],
+  "private": false,
   "scripts": {
     "bench": "ts-node bench/groth16.ts",
     "setup": "sh script/setup.sh",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "build": "tsc",
+    "prepublishOnly": "rm -rf dist && yarn build && cp -r dist/* . && rm -rf dist",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/benchmark": "^2.1.5",
     "@types/jest": "^29.5.14",
