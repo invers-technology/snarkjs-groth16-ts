@@ -1,0 +1,5 @@
+*_js
+dist
+*.r1cs
+node_modules
+.env
